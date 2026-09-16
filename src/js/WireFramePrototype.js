@@ -16,6 +16,14 @@ document.addEventListener("DOMContentLoaded", function() {
     home.addEventListener("click", function() {
         printMain(main);
     });
+
+
+    let editButton = document.querySelector("#editButton");
+    if (editButton) {
+        editButton.addEventListener("click", function() {
+            document.body.classList.toggle("edit-mode");
+        });
+    }
 });
 
 function printMain(main) {
@@ -30,6 +38,7 @@ function printMain(main) {
     3
     <span class="visually-hidden">3 games</span>
   </span>
+  <span class="red-x text-danger" onclick="toggleCard(this)">X</span>
       </div>
 
       <div class="n64 card-dvd">
@@ -40,6 +49,7 @@ function printMain(main) {
     2
     <span class="visually-hidden">2 games</span>
   </span>
+<span class="red-x text-danger" onclick="toggleCard(this)">X</span>
       </div>
 </section>
 `;
@@ -73,6 +83,7 @@ function printGames(main,platform) {
         <div class="card-body">
             <h2>${game}</h2>
         </div>
+        <span class="red-x text-danger" onclick="toggleCard(this)">X</span>
     </div>`).join('')}
 </section>
 `;
