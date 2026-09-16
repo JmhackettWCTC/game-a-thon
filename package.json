@@ -8,19 +8,22 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build:scss": "sass src/scss/main.scss dist/css/style.css --style=compressed",
-    "watch:scss": "sass --watch src/scss/main.scss:dist/css/style.css"
+    "build:scss": "sass --load-path=node_modules src/scss/main.scss dist/css/style.css --style=compressed",
+    "watch:scss": "sass --load-path=node_modules --watch src/scss/main.scss:dist/css/style.css"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^6.0.9",
     "vue": "^3.2.31",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "bootstrap": "^5.3.8",
+    "bootswatch": "^5.3.8"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^6.1.1",
+    "chokidar": "^5.0.0",
     "eslint": "^10.10.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.6",

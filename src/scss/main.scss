@@ -1,0 +1,79 @@
+
+$background-color: #333;
+$border-color: #666;
+$text-color: #fff;
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card-dvd {
+  margin: 20px;
+  position: relative;
+  width: 200px;
+  height: 300px;
+  background: linear-gradient(135deg, $background-color, darken($background-color, 10%));
+  border: 4px solid $border-color;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+}
+
+
+
+
+
+
+.card-dvd .card-body {
+  color: $text-color;
+  background: none;
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card-dvd.steam {
+  background: linear-gradient(135deg, darkblue, darken(blue, 10%));
+  border-color: blue;
+}
+
+.card-dvd.n64 {
+  background: linear-gradient(135deg, darkgray, darken(gray, 10%));
+  border-color: gray;
+}
+
+#wheel {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.deactivate {
+  opacity: 0.5;
+}
+
